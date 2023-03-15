@@ -5,28 +5,34 @@ import './App.css';
 function App() {
   return (
     <div>
-      <div  class="header">
+      <div  class="logo">
         <h1>RYYST</h1>
       </div>
 
 
+    <div class="header">
 
-   <h2>Asiakaspalvelu</h2>
+
+    <input class="searchbar" type="text" placeholder="Search.."></input>
+
+    <h4>"Ryyst and Jyyst"</h4>
+      </div>
+      
 
 
    <div class="categories">
 
-      <a class="1">Alkoholittomat</a>
+      <a class="c" href="https://www.oispakaljaa.com/">Alkoholittomat</a>
 
-      <a class="2">Viinit</a>
+      <a class="c" href="https://www.oispakaljaa.com/">Viinit</a>
 
-      <a class="3">Miedot juomat</a>
+      <a class="c" href="https://www.oispakaljaa.com/">Miedot juomat</a>
 
-      <a class="4">Vodkat ja viinat</a>
+      <a class="c" href="https://www.oispakaljaa.com/">Vodkat ja viinat</a>
 
-      <a class="5">Liköörit</a>
+      <a class="c" href="https://www.oispakaljaa.com/">Liköörit</a>
 
-      <a class="6">Muut</a>
+      <a class="c" href="https://www.oispakaljaa.com/">Muut</a>
 
 
    </div>
