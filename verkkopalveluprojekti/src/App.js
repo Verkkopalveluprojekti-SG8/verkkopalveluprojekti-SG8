@@ -34,7 +34,7 @@ function App() {
 
       <a class="c" href="https://www.oispakaljaa.com/">Muut</a>
 
-
+      
    </div>
    </div>
   );
