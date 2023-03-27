@@ -1,15 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Footer from './components/footer';
-import Header from './components/header';
-import Navbar from './components/navbar';
-import Products from './pages/products';
-import Home from './pages/home';
 import {Routes, Route} from 'react-router-dom';
 import axios from 'axios'
 import { useState, useEffect } from 'react';
 
-const URL = 'http://localhost:3000/verkkopalveluprojekti/src/index.php'
+
 
 
 function App() {
@@ -66,5 +61,7 @@ function App() {
    </div>
   );
 }
+
+
 
 export default App;
