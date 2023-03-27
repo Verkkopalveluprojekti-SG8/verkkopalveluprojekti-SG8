@@ -6,11 +6,30 @@ import Navbar from './components/navbar';
 import Products from './pages/products';
 import Home from './pages/home';
 import {Routes, Route} from 'react-router-dom';
+import axios from 'axios'
+import { useState, useEffect } from 'react';
 
-
+const URL = 'http://localhost:3000/verkkopalveluprojekti/src/index.php'
 
 
 function App() {
+
+  const [miedot, setMiedot] = useState([])
+
+
+    useEffect(getMiedot, [])
+
+    function getMiedot() {
+
+      axios.get(URL)
+      .then((response) => {
+        setMiedot(response.data);
+      
+      }).catch(error => {
+        alert(error);
+      })
+    }
+
   return (
     <div>
       <div  class="logo">
