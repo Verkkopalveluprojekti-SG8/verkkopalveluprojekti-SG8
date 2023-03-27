@@ -4,7 +4,7 @@ import {Routes, Route} from 'react-router-dom';
 import axios from 'axios'
 import { useState, useEffect } from 'react';
 
-
+const URL = 'http://localhost:3000/verkkopalveluprojekti/src/index.php'
 
 
 function App() {
@@ -48,7 +48,14 @@ function App() {
 
       <a class="c" href="https://www.oispakaljaa.com/">Viinit</a>
 
-      <a class="c" href="https://www.oispakaljaa.com/">Miedot juomat</a>
+      <a class="c" href="https://www.oispakaljaa.com/">Miedot juomat
+        <ol>
+          {miedot?.map(miedot_juomat => (
+            <li key={miedot_juomat.id}>{miedot_juomat.alcohol}</li>
+          ))}
+        </ol>
+      
+      </a>
 
       <a class="c" href="https://www.oispakaljaa.com/">Vodkat ja viinat</a>
 
