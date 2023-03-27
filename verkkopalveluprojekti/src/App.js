@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import Products from './pages/products';
+import Home from './pages/home';
+import {Routes, Route} from 'react-router-dom';
 
 
 function Navbar() {
@@ -31,6 +34,23 @@ function Navbar() {
 
 
 function App() {
+
+  const [miedot, setMiedot] = useState([])
+
+
+    useEffect(getMiedot, [])
+
+    function getMiedot() {
+
+      axios.get(URL)
+      .then((response) => {
+        setMiedot(response.data);
+      
+      }).catch(error => {
+        alert(error);
+      })
+    }
+
   return (
     <div>
       <div  class="logo">
