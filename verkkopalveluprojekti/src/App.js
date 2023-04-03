@@ -48,9 +48,9 @@ function App() {
 
 
         <div class="categories">
-
+          
           <a class="c" href="https://www.oispakaljaa.com/">Alkoholittomat</a>
-
+          
           <a class="c" href="https://www.oispakaljaa.com/">Viinit</a>
 
           <a class="c" href="https://www.oispakaljaa.com/">Miedot juomat
