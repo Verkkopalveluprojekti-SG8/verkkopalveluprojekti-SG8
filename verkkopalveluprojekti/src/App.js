@@ -6,6 +6,7 @@ import Navbar from './components/navbar';
 
 
 
+
 const URL = 'http://localhost:3000/verkkopalveluprojekti/src/index.php'
 
 

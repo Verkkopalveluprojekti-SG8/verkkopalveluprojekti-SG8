@@ -1,7 +1,9 @@
 body {
 
   background-color: pink;
+  margin: 10px;
 }
+
 
 .logo {
   display: flex;
