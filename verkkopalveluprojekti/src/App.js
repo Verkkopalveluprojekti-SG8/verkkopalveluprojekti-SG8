@@ -45,7 +45,7 @@ function App() {
         </div>
 
         <p class="container">
-          Tervetuloa Ryyst:in verkkokauppaan! Täältä pystyt tekemään tarvittavat juomaostokset tuleviin juhliin, viikonlopulle tai vaikkapa ihan vain itsellesi.
+          Tervetuloa Ryyst:in verkkokauppaan! Täältä pystyt tekemään tarvittavat juomaostokset tuleviin juhliin, viikonlopulle tai vaikkapa ihan vain itsellesi. Alhaalta löydät kaikki eri juoma kategoriamme.
         </p>
 
 

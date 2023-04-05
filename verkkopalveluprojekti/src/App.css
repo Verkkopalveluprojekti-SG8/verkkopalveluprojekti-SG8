@@ -46,6 +46,7 @@ img{
   grid-template-columns: repeat(2, 1fr);
   margin-left: 5%;
   font-size: small;
+  font-style: oblique;
   padding: 5px;
  
 }
@@ -53,9 +54,10 @@ img{
 .container{ 
   
   font-size: x-large;
-  padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 20px;
   border-radius: 10px;
-  width: 70%;
+  width: 80%;
 }
 
 .categories {
