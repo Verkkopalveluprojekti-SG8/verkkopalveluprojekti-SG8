@@ -31,19 +31,22 @@ function App() {
   return (
     <>
     <Navbar />
+
+    <div class="image">
+      <img src='kuvat\alcohol-gb76d9e301_1920.png' alt='alcohol'></img>
+      <div class="ryyst">RYYST</div>
+    </div>
+
     <div>
-        <div class="logo">
-          <h1>RYYST</h1>
-        </div>
-
-
+       
         <div class="header">
-
-
-          <input class="searchbar" type="text" placeholder="Search.."></input>
 
           <h4>"Ryyst and Jyyst"</h4>
         </div>
+
+        <p class="container">
+          Tervetuloa Ryyst:in verkkokauppaan! Täältä pystyt tekemään tarvittavat juomaostokset tuleviin juhliin, viikonlopulle tai vaikkapa ihan vain itsellesi.
+        </p>
 
 
 
@@ -70,7 +73,8 @@ function App() {
 
 
         </div>
-      </div></>
+      </div>
+      </>
   );
 }
 
