@@ -3,6 +3,7 @@ import './App.css';
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 import Navbar from './components/navbar';
+import alkoholittomat from './components/alkoholittomat';
 
 
 
@@ -45,10 +46,11 @@ function App() {
         </div>
 
 
+        
 
         <div class="categories">
-          
-          <a class="c" href="https://www.oispakaljaa.com/">Alkoholittomat</a>
+        
+          <alkoholittomat nimi="Alkoholittomat"/>
           
           <a class="c" href="https://www.oispakaljaa.com/">Viinit</a>
 
