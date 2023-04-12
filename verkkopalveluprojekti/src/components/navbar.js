@@ -1,4 +1,6 @@
 import React from 'react'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faShoppingCart} from '@fortawesome/free-solid-svg-icons'
 
 export default function Navbar() {
     return (
@@ -11,7 +13,7 @@ export default function Navbar() {
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Ostoskori <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Ostoskori <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon><span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Tietoa</a>
