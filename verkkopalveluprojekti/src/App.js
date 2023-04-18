@@ -75,29 +75,25 @@ function App() {
 
       <ol>
           {alk?.map(alk => (
-            <li key={alk.id}> {alk.nimi} Hinta: {alk.hinta} Vahvuus: {alk.alkoholi}</li>
+            <li key={alk.id}> {alk.nimi} Hinta: {alk.hinta} Vahvuus: {alk.alkoholi} koko: {alk.koko} kategoria: {alk.kategoria}</li>
           ))}
         </ol>
       
 
-      <div >Viinit</div>
-
-     <div>Miedot juomat </div>
-
-     
-          alk.map(mie => {
-          return (<div>  mie.filter(mie.kategoria === 'alkoholittomat').map (kategoria => <p>{mie.nimi}</p>
-          
-  )}</div>)    
     
-        
+
+     <div>Miedot</div>
+
+    
+    {/* 
+    <div>{alk.map(mie => {
+          return (  mie.filter(mie.kategoria === 'alkoholittomat').map (mie=> <p>{mie.nimi}</p>
+          
+    ))})}  </div>*/}
+    
        
 
-      <div >Vodkat ja viinat</div>
-
-      <div >Liköörit</div>
-
-      <div >Muut</div>
+      <div >Vahvat</div>
 
 
    </div>
@@ -105,12 +101,5 @@ function App() {
   );
 }
 
-
-
-
-<div >Miedot juomat
-
-
-</div>
 
 export default App;

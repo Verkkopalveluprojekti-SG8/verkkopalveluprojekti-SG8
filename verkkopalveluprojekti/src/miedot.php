@@ -5,7 +5,7 @@ header('Content-Type: application/json');
 
 $db = new PDO('mysql:host=localhost;dbname=juomat;charset=utf8', 'root', '');
 
-$sql = "select * from tuotteet where kategoria = 'miedot juomat'";
+$sql = "select * from tuotteet where kategoria = 'miedot'";
 
 $query = $db->query($sql);
 
