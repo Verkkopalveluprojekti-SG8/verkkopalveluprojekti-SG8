@@ -30,21 +30,22 @@ function Navbar() {
   )
 }
 
-const URL = 'http://localhost:3000/verkkopalveluprojekti/src/index.php'
+const ALK = 'http://localhost:3000/verkkopalveluprojekti/src/alkoholittomat.php'
+
 
 
 function App() {
 
-  const [miedot, setMiedot] = useState([])
+  const [alk, setAlk] = useState([])
 
 
-    useEffect(getMiedot, [])
+    useEffect(getAlk, [])
 
-    function getMiedot() {
+    function getAlk() {
 
-      axios.get(URL)
+      axios.get(ALK)
       .then((response) => {
-        setMiedot(response.data);
+        setAlk(response.data);
       
       }).catch(error => {
         alert(error);
@@ -70,24 +71,33 @@ function App() {
 
    <div class="categories">
 
-      <a class="c" href="https://www.oispakaljaa.com/">Alkoholittomat</a>
+      <div >Alkoholittomat</div>
 
-      <a class="c" href="https://www.oispakaljaa.com/">Viinit</a>
-
-      <a class="c" href="https://www.oispakaljaa.com/">Miedot juomat
-        <ol>
-          {miedot?.map(miedot_juomat => (
-            <li key={miedot_juomat.id}>{miedot_juomat.alcohol}</li>
+      <ol>
+          {alk?.map(alk => (
+            <li key={alk.id}> {alk.nimi} Hinta: {alk.hinta} Vahvuus: {alk.alkoholi}</li>
           ))}
         </ol>
       
-      </a>
 
-      <a class="c" href="https://www.oispakaljaa.com/">Vodkat ja viinat</a>
+      <div >Viinit</div>
 
-      <a class="c" href="https://www.oispakaljaa.com/">Liköörit</a>
+     <div>Miedot juomat </div>
 
-      <a class="c" href="https://www.oispakaljaa.com/">Muut</a>
+     
+          alk.map(mie => {
+          return (<div>  mie.filter(mie.kategoria === 'alkoholittomat').map (kategoria => <p>{mie.nimi}</p>
+          
+  )}</div>)    
+    
+        
+       
+
+      <div >Vodkat ja viinat</div>
+
+      <div >Liköörit</div>
+
+      <div >Muut</div>
 
 
    </div>
@@ -96,5 +106,11 @@ function App() {
 }
 
 
+
+
+<div >Miedot juomat
+
+
+</div>
 
 export default App;
