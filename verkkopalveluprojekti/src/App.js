@@ -1,80 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-import {useState, useEffect} from 'react'
-import axios from 'axios'
-import Navbar from './components/navbar';
-import alkoholittomat from './components/alkoholittomat';
-
-
-
-const URL = 'http://localhost:3000/verkkopalveluprojekti/src/index.php'
-
-
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Navbar } from "./components/navbar";
+import { Shop } from "./pages/shop/shop";
+import { Contact } from "./pages/cart/contact";
+import { Cart } from "./pages/cart";
+import { ShopContextProvider } from "./context/shop-context";
+import { Alkoholittomat } from "./pages/shop/alkoholittomat";
+import {Miedot} from "./pages/shop/miedot";
+import {Vahvat} from "./pages/shop/vahvat";
 function App() {
-
-  const [miedot, setMiedot] = useState([])
-
-
-    useEffect(getMiedot, [])
-
-    function getMiedot() {
-
-      axios.get(URL)
-      .then((response) => {
-        setMiedot(response.data);
-      
-      }).catch(error => {
-        alert(error);
-      })
-    }
-
   return (
-    <>
-    <Navbar />
-    <div>
-        <div class="logo">
-          <h1>RYYST</h1>
-        </div>
-
-
-        <div class="header">
-
-
-          <input class="searchbar" type="text" placeholder="Search.."></input>
-
-          <h4>"Ryyst and Jyyst"</h4>
-        </div>
-
-
-        
-
-        <div class="categories">
-        
-          <alkoholittomat nimi="Alkoholittomat"/>
-          
-          <a class="c" href="https://www.oispakaljaa.com/">Viinit</a>
-
-          <a class="c" href="https://www.oispakaljaa.com/">Miedot juomat
-            <ol>
-              {miedot?.map(miedot_juomat => (
-                <li key={miedot_juomat.id}>{miedot_juomat.alcohol}</li>
-              ))}
-            </ol>
-
-          </a>
-
-          <a class="c" href="https://www.oispakaljaa.com/">Vodkat ja viinat</a>
-
-          <a class="c" href="https://www.oispakaljaa.com/">Liköörit</a>
-
-          <a class="c" href="https://www.oispakaljaa.com/">Muut</a>
-
-
-        </div>
-      </div></>
+    <div className="App">
+      <ShopContextProvider>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Shop />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/alkoholittomat" element={<Alkoholittomat />} />
+            <Route path="/miedot" element={<Miedot />} />
+            <Route path="/vahvat" element={<Vahvat />} />
+          </Routes>
+        </Router>
+      </ShopContextProvider>
+    </div>
   );
 }
-
-
 
 export default App;
