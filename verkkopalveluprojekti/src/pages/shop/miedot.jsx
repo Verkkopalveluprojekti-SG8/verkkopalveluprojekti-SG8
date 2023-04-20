@@ -1,9 +1,9 @@
 import React from "react";
 import { PRODUCTS } from "../../products";
 import { Product } from "./product";
-import "./shop.css";
 
-export const alkoholittomat = () => {
+
+export const Miedot = () => {
     return (
         <div className="shop">
             <div className="shopTitle">
