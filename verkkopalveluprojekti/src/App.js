@@ -1,105 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-import {useState, useEffect} from 'react'
-import axios from 'axios'
-
-
-function Navbar() {
-  return (
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-<div class="container-fluid">
-  <a class="navbar-brand" href="#">Top navbar</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</div>
-</nav>
-  )
-}
-
-const ALK = 'http://localhost:3000/verkkopalveluprojekti/src/alkoholittomat.php'
-
-
-
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Navbar } from "./components/navbar";
+import { Shop } from "./pages/shop/shop";
+import { Contact } from "./pages/cart/contact";
+import { CartItem } from "./pages/cart/cart-items";
+import { ShopContextProvider } from "./context/shop-context";
+import { Alkoholittomat } from "./pages/shop/alkoholittomat";
+import {Miedot} from "./pages/shop/miedot";
+import {Vahvat} from "./pages/shop/vahvat";
 function App() {
-
-  const [alk, setAlk] = useState([])
-
-
-    useEffect(getAlk, [])
-
-    function getAlk() {
-
-      axios.get(ALK)
-      .then((response) => {
-        setAlk(response.data);
-      
-      }).catch(error => {
-        alert(error);
-      })
-    }
-
   return (
-    <div>
-      <div  class="logo">
-        <h1>RYYST</h1>
-      </div>
-
-
-    <div class="header">
-
-
-    <input class="searchbar" type="text" placeholder="Search.."></input>
-
-    <h4>"Ryyst and Jyyst"</h4>
-      </div>
-      
-
-
-   <div class="categories">
-
-      <div >Alkoholittomat</div>
-
-      <ol>
-          {alk?.map(alk => (
-            <li key={alk.id}> {alk.nimi} Hinta: {alk.hinta} Vahvuus: {alk.alkoholi} koko: {alk.koko} kategoria: {alk.kategoria}</li>
-          ))}
-        </ol>
-      
-
-    
-
-     <div>Miedot</div>
-
-    
-    {/* 
-    <div>{alk.map(mie => {
-          return (  mie.filter(mie.kategoria === 'alkoholittomat').map (mie=> <p>{mie.nimi}</p>
-          
-    ))})}  </div>*/}
-    
-       
-
-      <div >Vahvat</div>
-
-
-   </div>
-   </div>
+    <div className="App">
+      <ShopContextProvider>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Shop />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/alkoholittomat" element={<Alkoholittomat />} />
+            <Route path="/miedot" element={<Miedot />} />
+            <Route path="/vahvat" element={<Vahvat />} />
+          </Routes>
+        </Router>
+      </ShopContextProvider>
+    </div>
   );
 }
-
 
 export default App;
