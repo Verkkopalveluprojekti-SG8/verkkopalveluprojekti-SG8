@@ -1,95 +1,60 @@
-import product1 from "./assets/välivesi.png"
-import product2 from "./assets/vissy.png"
-import product3 from "./assets/smurffi.png"
-import product4 from "./assets/karhu.png"
-import product5 from "./assets/lonkero.png"
-import product6 from "./assets/sandels.png"
-import product7 from "./assets/gambina.png"
-import product8 from "./assets/morgan.png"
-import product9 from "./assets/votka.png"
+import gambina from "./assets/gambina.png";
+import product2 from "./assets/karhu.png";
+import product3 from "./assets/lonkero.png";
+import product4 from "./assets/morgan.png";
+import product5 from "./assets/sandels.png";
+import product6 from "./assets/smurffi.png";
+import product7 from "./assets/välivesi.png";
+import product8 from "./assets/vissy.png";
+
+
 export const PRODUCTS = [
-    {
-        id: 1,
-        productName: "alkoholittomat",
-        price: 1.50,
-        produtImage: product1,
-    },
-
-{
+  {
+    id: 1,
+    productName: "IPhone",
+    price: 999.0,
+    productImage: gambina,
+  },
+  {
     id: 2,
-    productName: "miedot",
-    price: 2.15,
-    produtImage: product4,
-},
-
-{
+    productName: "Macbook Pro 2022 (M1)",
+    price: 1999.0,
+    productImage: product2,
+  },
+  {
     id: 3,
-    productName: "vahvat",
-    price: 2.50,
-    produtImage: product6,
-},
-
-{
+    productName: "Cannon M50 Camera",
+    price: 699.0,
+    productImage: product3,
+  },
+  {
     id: 4,
-    productName: "välivesi",
-    price: 2.50,
-    produtImage: product1,
-},
-
-{
+    productName: "WLS Van Gogh Denim Jacket",
+    price: 228.0,
+    productImage: product4,
+  },
+  {
     id: 5,
-    productName: "vissy",
-    price: 2.50,
-    produtImage: product2,
-},
-
-{
+    productName: "LED Light Strips",
+    price: 19.99,
+    productImage: product5,
+  },
+  {
     id: 6,
-    productName: "smurffi",
-    price: 2.50,
-    produtImage: product3,
-},
-
-{
+    productName: "SPECTRUM LS TEE",
+    price: 68.0,
+    productImage: product6,
+  },
+  {
     id: 7,
-    productName: "karhu",
-    price: 3.50,
-    produtImage: product4,
-},
-
-{
+    productName: "AUTO SERVICE SHIRT by GOLF WANG",
+    price: 120.0,
+    productImage: product7,
+  },
+  {
     id: 8,
-    productName: "lonkero",
-    price: 4.50,
-    produtImage: product5,
-},
-
-{
-    id: 9,
-    productName: "sandels",
-    price: 3.50,
-    produtImage: product6,
-},
-
-{
-    id: 10,
-    productName: "votka",
-    price: 20.50,
-    produtImage: product7,
-},
-
-{
-    id: 11,
-    productName: "gambina",
-    price: 12.50,
-    produtImage: product8,
-},
-
-{
-    id: 12,
-    productName: "morgan",
-    price: 18.50,
-    produtImage: product9,
-},
-
+    productName: "DON'T TRIP UNSTRUCTURED HAT",
+    price: 40.0,
+    productImage: product8,
+  },
 ];
