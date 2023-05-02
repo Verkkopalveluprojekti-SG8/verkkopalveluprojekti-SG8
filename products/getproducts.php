@@ -2,9 +2,17 @@
 require_once '../inc/functions.php';
 require_once '../inc/headers.php';
 
-$uri = parse_url(filter_input(INPUT_SERVER,'PATH_INFO'),PHP_URL_PATH);
-$parameters = explode('/',$uri);
-$category_id = $parameters[1];
+//$uri = parse_url(filter_input(INPUT_SERVER,'PATH_INFO'),PHP_URL_PATH);
+//$parameters = explode('/',$uri);
+//$category_id = 
+//print_r($parameters);
+//print_r($category_id);
+
+$uri_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$uri_segments = explode('/', $uri_path);
+
+//print_r( $uri_segments); // for www.example.com/user/account you will get 'user'
+$category_id = $uri_segments[3];
 
 try {
   $db = openDb();
@@ -25,3 +33,6 @@ try {
 catch (PDOException $pdoex) {
   returnError($pdoex);
 }
+
+
+?>;

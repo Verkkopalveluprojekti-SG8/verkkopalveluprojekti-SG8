@@ -13,6 +13,7 @@ export default function Navbar({url,cart}) {
     axios.get(url + 'products/getcategories.php')
       .then((response) => {
         const json = response.data;
+        console.log(response.data)
         setCategories(json);
       }).catch (error => {
         alert(error.response === undefined ? error : error.response.data.error);
