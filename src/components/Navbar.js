@@ -39,20 +39,16 @@ export default function Navbar({url,cart}) {
             <li className="nav-item">
               <Link className="nav-link" to="/">Home</Link>
             </li>
-            <li className='nav-item dropdown'>
-              <a className='nav-link dropdown-toggle' href="#" id="dropdown01" 
-              data-bs-toggle="dropdown" aria-expanded="false">Products</a>
-              <ul className='dropdown-menu' aria-labelledby='dropdown01'>
-                {categories.map(category => (
-                  <li key={category.id}>
-                   {<Link 
-                      className='dropdown-item'
-                      to={'/products/' + category.id}>{category.name}
-                    </Link>}
-                  </li>
+          
+            {categories.map(category => (
+                  <li className="nav-item">
+                  <Link className="nav-link" to="/">{category.name}</Link>
+                </li>
                 ))}
-              </ul>
-            </li>
+
+
+
+
             <li className="nav-item">
               <Link className="nav-link" to="/about">About</Link>
             </li>
