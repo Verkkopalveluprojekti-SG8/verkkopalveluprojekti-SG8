@@ -6,6 +6,10 @@ footer .container {
   margin-top: 0;
 }
 
+body{
+  background-color: rgb(247, 217, 162);
+}
+
 footer {
   position: fixed;
   bottom: 0;
