@@ -20,11 +20,15 @@ export default function Home() {
   }, [])
   return (
     <>
-    <div>Tervetuloa Ryyst-verkkokkauppaan!</div>
-    <img src="/src/assets/alcohol-gb76d9e301_1920.png" alt='kuva'></img>
+    <h3>Tervetuloa Ryyst-verkkokkauppaan!</h3>
+    <img src="/src/assets/alcohol-gb76d9e301_1920.png" alt='Ryyst'></img>
 
+<br></br>
 
-    <h3> Kategoriamme:</h3>
+<br></br>
+<br></br>
+
+    <h5> Kategoriamme:</h5>
    <p>
                   <li className="nav-item">
                   <Link className="nav-link" to="/alkoholittomat">Alkoholittomat</Link>
