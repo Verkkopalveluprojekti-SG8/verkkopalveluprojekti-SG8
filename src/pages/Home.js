@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
     <div>Tervetuloa Ryyst-verkkokkauppaan!</div>
-    <img src={'gambina.png'} alt='kuva'></img>
+    
     </>
 
   )

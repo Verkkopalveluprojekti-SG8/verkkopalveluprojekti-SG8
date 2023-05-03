@@ -10,6 +10,10 @@ body{
   background-color: rgb(247, 217, 162);
 }
 
+div{
+  font-size: large;
+}
+
 footer {
   position: fixed;
   bottom: 0;
