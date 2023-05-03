@@ -13,7 +13,7 @@ export default function About() {
  return (
 
 
-  <h3> Ryyst on Jyyst Oy:n keväällä 2023 julkaistu alkoholituotteiden verkkokauppa.</h3>
+  <h3> Ryyst on Jyyst Oy:n keväällä 2023 julkaisema alkoholituotteiden verkkokauppa.</h3>
 
 
  )

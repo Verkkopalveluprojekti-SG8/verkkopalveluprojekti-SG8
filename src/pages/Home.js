@@ -32,7 +32,7 @@ export default function Home() {
    <p>
                   <li className="nav-item">
                   <Link className="nav-link" to="/alkoholittomat">Alkoholittomat</Link>
-
+                  </li>
                   <li className="nav-item">
                   <Link className="nav-link" to="/miedot">Miedot</Link>
                 </li>
@@ -40,7 +40,7 @@ export default function Home() {
                 <li className="nav-item">
                   <Link className="nav-link" to="/vahvat">Vahvat</Link>
                 </li>
-                </li>
+               
                  </p> 
     </>
 
