@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
     <h3>Tervetuloa Ryyst-verkkokkauppaan!</h3>
-    <img src="/src/assets/alcohol-gb76d9e301_1920.png" alt='Ryyst'></img>
+    <img src="src\assets\alcohol-gb76d9e301_1920.png" alt='Ryyst'/>
 
 <br></br>
 
