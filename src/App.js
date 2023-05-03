@@ -13,6 +13,9 @@ import Admin from './adminstration/Admin';
 import ManageCategories from './adminstration/ManageCategories';
 import ManageProducts from './adminstration/ManageProducts';
 import NotFound from './pages/NotFound';
+import Alkoholittomat from './pages/Alkoholittomat';
+import Miedot from './pages/Miedot';
+import Vahvat from './pages/Vahvat';
 
 
 const URL ='http://localhost:3000/';
@@ -64,6 +67,9 @@ function App() {
       <div className='container'>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/alkoholittomat" element={<Alkoholittomat />} />
+          <Route path="/miedot" element={<Miedot />} />
+          <Route path="/vahvat" element={<Vahvat />} />
           <Route path="products/:categoryId" element={<Products url={URL} />} />
           <Route path="search/:searchPhrase" element={<Products url={URL} />} />
           <Route path="product/:productId" element={<Product url={URL} addToCart={addToCart} />} />

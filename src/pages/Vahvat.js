@@ -1,5 +1,6 @@
 
 
+
 import axios from 'axios';
 import React,{useState,useEffect} from 'react';
 
@@ -7,14 +8,14 @@ import { Link, useNavigate } from 'react-router-dom';
 
 
 
-export default function About({}) {
+export default function Vahvat() {
 
 
   const [product, setProduct] = useState(null);
 
  
   useEffect(() => {
-    axios.get('http://localhost:3000/products/getproduct.php/1')
+    axios.get('http://localhost:3000/products/getproduct.php/3')
       .then((response) => {
         const json = response.data;
         console.log(response.data)
@@ -27,10 +28,10 @@ export default function About({}) {
 
   return (  
     <div>
-      <h3>Alkoholiton tuotteeme:</h3> <br></br>
+      <h3>Vahva tuotteemme:</h3> <br></br>
       <h1>{product?.name}</h1>
-      <p>{product?.price}</p>
-      <img src="src\assets\välivesi.png" alt='kuva'></img>
+      <p>{product?.price} €</p>
+      <img src="src\assets\votka.png" alt='kuva'></img>
     </div>
   )
 }
