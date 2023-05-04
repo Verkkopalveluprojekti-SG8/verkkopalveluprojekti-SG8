@@ -31,6 +31,8 @@ export default function Miedot() {
       <h3>Mieto tuotteemme:</h3> <br></br>
       <h1>{product?.name}</h1>
       <p>{product?.price}	€</p>
+      <p>{product?.koko} l</p>
+      <p>{product?.aprosentti} %</p>
       <img src="src\assets\karhu.png" alt='kuva'></img>
     </div>
   )
