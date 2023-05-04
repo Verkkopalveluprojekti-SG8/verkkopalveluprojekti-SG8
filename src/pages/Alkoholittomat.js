@@ -31,6 +31,8 @@ export default function Alkoholittomat() {
       <h3>Alkoholiton tuotteemme:</h3> <br></br>
       <h1>{product?.name}</h1>
       <p>{product?.price}</p>
+      <p>{product?.koko} l</p>
+      <p>{product?.aprosentti} %</p>
       <div><img id="1" src="./assets/välivesi.png" alt='kuva'></img> </div>
     </div>
   )
