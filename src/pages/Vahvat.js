@@ -30,9 +30,9 @@ export default function Vahvat() {
     <div>
       <h3>Vahva tuotteemme:</h3> <br></br>
       <h1>{product?.name}</h1>
-      <p>{product?.price} €</p>
-      <p>{product?.koko} l</p>
-      <p>{product?.aprosentti} %</p>
+      <p>Hinta: {product?.price} €</p>
+      <p>Koko: {product?.koko} l</p>
+      <p>Vahvuus: {product?.aprosentti} %</p>
       <img class="page" src="votka.png" alt='kuva'></img>
     </div>
   )

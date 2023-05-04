@@ -40,13 +40,7 @@ export default function Navbar({url,cart}) {
               <Link className="nav-link" to="/">Home</Link>
             </li>
           
-            {categories.map(category => (
-                  <li className="nav-item">
-                  <Link className="nav-link" to="/">{category.name}</Link>
-                </li>
-                ))}
-
-
+          
 
 
             <li className="nav-item">
