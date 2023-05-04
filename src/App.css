@@ -12,7 +12,9 @@ body{
 }
 
 
-
+img{
+ max-width: 600px;
+}
 
 footer {
   position: fixed;
