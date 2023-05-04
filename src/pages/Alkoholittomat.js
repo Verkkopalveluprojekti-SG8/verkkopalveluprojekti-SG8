@@ -1,5 +1,5 @@
 
-
+import './page.css';
 
 import axios from 'axios';
 import React,{useState,useEffect} from 'react';
@@ -33,7 +33,7 @@ export default function Alkoholittomat() {
       <p>{product?.price}</p>
       <p>{product?.koko} l</p>
       <p>{product?.aprosentti} %</p>
-      <div><img id="1" src="./assets/välivesi.png" alt='kuva'></img> </div>
+      <div><img class="page" src="välivesi.png" alt='kuva'></img> </div>
     </div>
   )
 }

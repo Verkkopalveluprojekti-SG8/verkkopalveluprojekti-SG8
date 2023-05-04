@@ -20,8 +20,8 @@ export default function Home() {
   }, [])
   return (
     <>
-    <h3>Tervetuloa Ryyst-verkkokkauppaan!</h3>
-    <img src="src\assets\alcohol-gb76d9e301_1920.png" alt='Ryyst'/>
+    <h3>Tervetuloa Ryyst-verkkokauppaan!</h3>
+    <img src="alcohol-gb76d9e301_1920.png" alt='Ryyst'/>
 
 <br></br>
 
@@ -30,15 +30,15 @@ export default function Home() {
 
     <h5> Kategoriamme:</h5>
    <p>
-                  <li className="nav-item">
-                  <Link className="nav-link" to="/alkoholittomat">Alkoholittomat</Link>
+                  <li>
+                  <Link to="/alkoholittomat">Alkoholittomat</Link>
                   </li>
-                  <li className="nav-item">
-                  <Link className="nav-link" to="/miedot">Miedot</Link>
+                  <li>
+                  <Link to="/miedot">Miedot</Link>
                 </li>
 
-                <li className="nav-item">
-                  <Link className="nav-link" to="/vahvat">Vahvat</Link>
+                <li>
+                  <Link to="/vahvat">Vahvat</Link>
                 </li>
                
                  </p> 

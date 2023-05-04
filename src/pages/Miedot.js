@@ -33,7 +33,7 @@ export default function Miedot() {
       <p>{product?.price}	€</p>
       <p>{product?.koko} l</p>
       <p>{product?.aprosentti} %</p>
-      <img src="src\assets\karhu.png" alt='kuva'></img>
+      <img class="page" src="karhu.png" alt='kuva'></img>
     </div>
   )
 }

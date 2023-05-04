@@ -33,7 +33,7 @@ export default function Vahvat() {
       <p>{product?.price} €</p>
       <p>{product?.koko} l</p>
       <p>{product?.aprosentti} %</p>
-      <img src="src\assets\votka.png" alt='kuva'></img>
+      <img class="page" src="votka.png" alt='kuva'></img>
     </div>
   )
 }
